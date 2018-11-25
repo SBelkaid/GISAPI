@@ -37,7 +37,7 @@ paths:
       tags:
         - "People"
       summary: "The user data structure supported by the server application"
-      description: "Add a user to the database"
+      description: "Add a user to the database by providing the username, lastname, email and password. "
       parameters:
         - name: firstname
           description: user's first name
