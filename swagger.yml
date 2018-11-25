@@ -1,0 +1,77 @@
+swagger: "2.0"
+info:
+  description: This is the API documentation of our GIS system
+  version: "1.0.0"
+  title: GIS REST API
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+## Paths supported by the server application
+paths:
+  /people:
+    get:
+      operationId: "people.read"
+      tags:
+        - "People"
+      summary: "The people data structure supported by the server application"
+      description: "Read the list of people"
+      responses:
+        200:
+          description: "Successful read people list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                fname:
+                  type: "string"
+                lname:
+                  type: "string"
+                timestamp:
+                  type: "string"
+    post:
+      operationId: "people.add_user"
+      tags:
+        - "People"
+      summary: "The user data structure supported by the server application"
+      description: "Add a user to the database"
+      parameters:
+        - name: firstname
+          description: user's first name
+          in: query
+          type: string
+          required: true
+        - name: lastname
+          description: user's last name
+          in: query
+          type: string
+          required: true
+        - name: email
+          description: user's email address
+          in: query
+          type: string
+          required: true
+        - name: password
+          description: selected password
+          in: query
+          type: string
+          required: true
+
+      responses:
+        200:
+          description: "Successful user add operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                username:
+                  type: "string"
+                lastname:
+                  type: "string"
+                email:
+                  type: "string"
+                password:
+                  type: "string"
