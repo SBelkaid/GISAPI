@@ -59,6 +59,11 @@ paths:
           in: query
           type: string
           required: true
+        - name: role
+          description: role of the user
+          in: query
+          type: string
+          required: true
 
       responses:
         200:
@@ -75,3 +80,10 @@ paths:
                   type: "string"
                 password:
                   type: "string"
+                role:
+                  type: "string"
+securityDefinitions:
+    jwt:
+      type: apiKey
+      name: Authorization
+      in: header
