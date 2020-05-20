@@ -21,7 +21,7 @@ Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 functools32==3.2.3.post2
 GisApiFlask==0.0.0
-httplib2==0.11.3
+httplib2==0.18.0
 idna==2.7
 inflection==0.3.1
 itsdangerous==0.24
